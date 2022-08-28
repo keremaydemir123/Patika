@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+img {
+  padding: 6px;
+  height: 250px;
+  object-fit: cover;
+}
+
+
+.myImg {
+  height: 300px;
+  width: 25%;
+}
+.card {
+  height: 500px;
+}

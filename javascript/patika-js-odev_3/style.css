@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f1f5f8;
+  font-family: "Zilla Slab", serif;
+}
+
+
+h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  text-align: center;
+  color: #ff6a23;
+}
+.menu {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+.btn-item {
+  margin-left: 15px;
+  width: 60px;
+  height: 40px;
+}
+
+.photo {
+  width: 30%;
+  height: 100%;
+  object-fit: cover;
+  border: 0.25rem solid black;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+.card-container {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 40px;
+}
+
+.card-wrapper {
+  display: flex;
+  width: 600px;
+  height: 200px;
+  padding: 20px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 20px;
+  height: 100%;
+  width: 70%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e00a00;
+  align-items: center;
+}
+
+h4 {
+  color: #e00a00;
+}
