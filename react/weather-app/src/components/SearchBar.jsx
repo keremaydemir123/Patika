@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import cities from "../../cities.json";
+import { useWeather } from "../context/WeatherContext";
 
-function SearchBar({ onCitySelect }) {
+function SearchBar() {
   const [input, setInput] = useState("");
   const [selectedItem, setSelectedItem] = useState(0);
   const [showResults, setShowResults] = useState(false);
+
+  const { setLatLon } = useWeather();
 
   const filtered = cities.filter((city) => {
     return city.name.toLowerCase().includes(input.toLowerCase());
@@ -15,7 +18,9 @@ function SearchBar({ onCitySelect }) {
     setSelectedItem(
       filtered.findIndex((city) => city.name === event.target.innerText)
     );
-    onCitySelect(filtered.find((city) => city.name === event.target.innerText));
+    handleCitySelect(
+      filtered.find((city) => city.name === event.target.innerText)
+    );
     setShowResults(false);
   }
 
@@ -27,9 +32,13 @@ function SearchBar({ onCitySelect }) {
   function handleSubmit(event) {
     event.preventDefault();
     setInput(filtered[0].name);
-    onCitySelect(filtered[0]);
+    handleCitySelect(filtered[0]);
     setShowResults(false);
   }
+
+  const handleCitySelect = (city) => {
+    setLatLon({ latitude: city.latitude, longitude: city.longitude });
+  };
 
   return (
     <>

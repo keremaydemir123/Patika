@@ -20,18 +20,11 @@ function App() {
     return dayOfWeek - 1;
   };
 
-  const handleCitySelect = (city) => {
-    setLatLon({ latitude: city.latitude, longitude: city.longitude });
-  };
-
   return (
     <main className="App">
-      <SearchBar onCitySelect={handleCitySelect} />
+      <SearchBar />
 
-      <Header
-        cityName={weather?.city_name}
-        countryCode={weather?.country_code}
-      />
+      <Header />
 
       <CardContainer>
         {weather?.data?.map((day, index) => {
@@ -42,7 +35,7 @@ function App() {
               icon={day.weather.icon}
               min_temp={day.min_temp}
               max_temp={day.max_temp}
-              active={index === todayAsNumber() ? true : false}
+              active={index === todayAsNumber()}
             />
           );
         })}

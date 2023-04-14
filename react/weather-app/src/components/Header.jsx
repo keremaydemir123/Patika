@@ -1,13 +1,15 @@
 import React from "react";
+import { useWeather } from "../context/WeatherContext";
 
-function Header({ cityName, countryCode }) {
-  if (!cityName || !countryCode) return null;
+function Header() {
+  const { weather } = useWeather();
+  if (!weather) return null;
 
   return (
     <div className="location-container">
       <h1 className="location">
-        {cityName}
-        <span className="country_code">, {countryCode}</span>
+        {weather.city_name}
+        <span className="country_code">, {weather.country_code}</span>
       </h1>
     </div>
   );
