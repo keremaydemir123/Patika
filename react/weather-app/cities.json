@@ -136,14 +136,6 @@
     "region": "Marmara"
   },
   {
-    "id": 18,
-    "name": "Çankırı",
-    "latitude": "40.6013",
-    "longitude": "33.6134",
-    "population": 180945,
-    "region": "İç Anadolu"
-  },
-  {
     "id": 19,
     "name": "Çorum",
     "latitude": "40.5506",

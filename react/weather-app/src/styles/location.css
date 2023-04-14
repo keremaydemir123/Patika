@@ -9,13 +9,20 @@
 }
 
 .location {
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
   color: #222;
+  letter-spacing: 5px;
+  text-shadow: 0 2px 1px #a8a, -1px 3px 1px #b9b, -2px 5px 1px #aaa;
 }
 
 .location > .country_code {
   font-size: 0.8em;
   font-weight: normal;
-  color: #555;
+}
+
+@media screen and (max-width: 768px) {
+  .location {
+    font-size: 40px;
+  }
 }

@@ -3,6 +3,7 @@ import React from "react";
 function Card({ day, icon, min_temp, max_temp, active }) {
   return (
     <div className={`card ${active ? "active" : ""}`}>
+      {active && <div className="today">Today</div>}
       <div className="card__day">{day}</div>
       <div className="card__icon">
         <img

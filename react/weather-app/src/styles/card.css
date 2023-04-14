@@ -10,7 +10,7 @@
 .card {
   height: 180px;
   width: 180px;
-  background-color: #eee;
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
@@ -19,11 +19,13 @@
   padding: 1rem;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .card.active {
-  border: 2px solid #f00;
+  border: 2px solid #eae;
   color: #fff;
+  box-shadow: #eeaaee80 0px 20px 25px -5px, #eeaaee80 0px 10px 10px -5px;
 }
 
 .card__day {
@@ -49,4 +51,33 @@
 
 .card__temp--max {
   color: #f00;
+}
+
+.today {
+  position: absolute;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #444;
+  top: 4px;
+  animation: blink 1s linear infinite alternate-reverse;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    height: 180px;
+    width: 100%;
+  }
 }
