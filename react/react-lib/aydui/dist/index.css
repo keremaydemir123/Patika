@@ -1,0 +1,22 @@
+._4s-13 {
+  --primary: #5a67d8;
+  --secondary: #ec4899;
+  --accent: #fdac5f;
+  --primaryContent: #ffffff;
+  --secondaryContent: #ffffff;
+  --accentContent: #ffffff;
+  --primaryBorder: #434190;
+  --secondaryBorder: #c34a36;
+  --accentBorder: #cb8e4d;
+  --primaryHover: #4753c4;
+  --secondaryHover: #e24883;
+  --accentHover: #f4c46d;
+
+  transition: all 0.2s ease-in-out;
+  padding: 0.5em 0.75em;
+  font-size: 1em;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 4px;
+  cursor: pointer;
+}
