@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gradient-to-b from-slate-100 to-stone-50 min-h-screen;
+}
+
+a {
+  @apply text-slate-400 hover:underline;
+}
