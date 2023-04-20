@@ -5,7 +5,7 @@ function Header() {
   return (
     <header className="relative w-full h-screen flex items-center justify-center">
       <img
-        src="/books4.jpg"
+        src="/books.jpg"
         alt="books"
         className="absolute left-0 w-full h-full object-cover"
       />
